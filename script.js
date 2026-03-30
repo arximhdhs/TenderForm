@@ -245,6 +245,11 @@
           session_id: sessionId,
           email: email
         });
+        // Mark as submitted in localStorage
+        try {
+          localStorage.setItem('tender_submitted', 'true');
+          localStorage.setItem('tender_submitted_email', email);
+        } catch (e) { /* localStorage unavailable */ }
         showSuccess();
       })
       .catch(function (err) {
@@ -323,6 +328,17 @@
 
   function init() {
     initFirebase();
+
+    // Check if user already submitted
+    try {
+      if (localStorage.getItem('tender_submitted') === 'true') {
+        progressEl.classList.add('progress--hidden');
+        showSlide('slide-success');
+        hideStickyCtaCompletely();
+        logEvent('page_view', { session_id: sessionId, returning: true, ...utmParams });
+        return; // Skip all other setup — already submitted
+      }
+    } catch (e) { /* localStorage unavailable */ }
 
     // Track page view
     logEvent('page_view', {
