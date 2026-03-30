@@ -67,11 +67,11 @@
   <section class="questionnaire-section" id="questionnaire">
     <div class="questionnaire-section__container">
       <h2 class="questionnaire-section__title">Πες μας λίγα για εσένα</h2>
-      <p class="questionnaire-section__subtitle">Απάντησε σε 4 γρήγορες ερωτήσεις για να μπεις στη λίστα αναμονής.</p>
+      <p class="questionnaire-section__subtitle">Απάντησε σε 3 γρήγορες ερωτήσεις για να μπεις στη λίστα αναμονής.</p>
 
       <div class="questionnaire-card" id="questionnaireCard">
         <!-- Progress bar -->
-        <div class="progress" id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4">
+        <div class="progress" id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="3">
           <div class="progress__bar" id="progressBar"></div>
           <span class="progress__label" id="progressLabel"></span>
         </div>
@@ -90,17 +90,8 @@
             </div>
           </div>
 
-          <!-- Question 2: Single status -->
-          <div class="slide" data-question="single_status" id="slide-1">
-            <h3 class="slide__question">Είσαι ελεύθερος/η;</h3>
-            <div class="options" role="radiogroup" aria-label="Είσαι ελεύθερος/η;">
-              <button class="option" type="button" data-value="yes" role="radio" aria-checked="false">Ναι</button>
-              <button class="option" type="button" data-value="no" role="radio" aria-checked="false">Όχι</button>
-            </div>
-          </div>
-
-          <!-- Question 3: Gender -->
-          <div class="slide" data-question="gender" id="slide-2">
+          <!-- Question 2: Gender -->
+          <div class="slide" data-question="gender" id="slide-1">
             <h3 class="slide__question">Φύλο</h3>
             <div class="options" role="radiogroup" aria-label="Φύλο">
               <button class="option" type="button" data-value="male" role="radio" aria-checked="false">Άνδρας</button>
@@ -108,27 +99,14 @@
             </div>
           </div>
 
-          <!-- Question 4: Church attendance -->
-          <div class="slide" data-question="church_attendance" id="slide-3">
+          <!-- Question 3: Church attendance -->
+          <div class="slide" data-question="church_attendance" id="slide-2">
             <h3 class="slide__question">Κάθε πότε πας εκκλησία την Κυριακή;</h3>
             <div class="options" role="radiogroup" aria-label="Κάθε πότε πας εκκλησία την Κυριακή;">
               <button class="option" type="button" data-value="every_sunday" role="radio" aria-checked="false">Κάθε Κυριακή</button>
               <button class="option" type="button" data-value="1-2_per_month" role="radio" aria-checked="false">1–2 φορές τον μήνα</button>
               <button class="option" type="button" data-value="holidays" role="radio" aria-checked="false">Τις γιορτές</button>
               <button class="option" type="button" data-value="easter_only" role="radio" aria-checked="false">Μόνο την Ανάσταση</button>
-            </div>
-          </div>
-
-          <!-- Disqualified state (not single) -->
-          <div class="slide" id="slide-disqualified">
-            <div class="end-state end-state--disqualified">
-              <div class="end-state__icon" aria-hidden="true">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D32F2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-              </div>
-              <h3 class="end-state__title">Ευχαριστούμε για το ενδιαφέρον σου!</h3>
-              <p class="end-state__text">
-                Η λίστα αναμονής αφορά αυτή τη στιγμή άτομα που είναι ελεύθερα. Αν αλλάξει η κατάστασή σου στο μέλλον, θα χαρούμε να σε υποδεχτούμε.
-              </p>
             </div>
           </div>
 

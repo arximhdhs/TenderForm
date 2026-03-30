@@ -71,9 +71,8 @@
 
   const QUESTIONS = [
     { key: 'age_range', slideId: 'slide-0' },
-    { key: 'single_status', slideId: 'slide-1' },
-    { key: 'gender', slideId: 'slide-2' },
-    { key: 'church_attendance', slideId: 'slide-3' }
+    { key: 'gender', slideId: 'slide-1' },
+    { key: 'church_attendance', slideId: 'slide-2' }
   ];
 
   const answers = {};
@@ -139,14 +138,6 @@
     }, 400);
   }
 
-  function showDisqualified() {
-    progressEl.classList.add('progress--hidden');
-    showSlide('slide-disqualified');
-    logEvent('not_single_disqualified', { session_id: sessionId });
-    // Still save partial answers
-    saveToFirestore(null);
-  }
-
   function showSuccess() {
     showSlide('slide-success');
   }
@@ -192,13 +183,6 @@
   }
 
   function advanceFromQuestion(questionKey, value) {
-    // Special: if not single, disqualify
-    if (questionKey === 'single_status' && value === 'no') {
-      showDisqualified();
-      hideStickyCtaCompletely();
-      return;
-    }
-
     var nextStep = currentStep + 1;
     if (nextStep < QUESTIONS.length) {
       goToQuestion(nextStep);
@@ -267,7 +251,6 @@
   function saveToFirestore(email) {
     var data = {
       age_range: answers.age_range || null,
-      single_status: answers.single_status || null,
       gender: answers.gender || null,
       church_attendance: answers.church_attendance || null,
       email: email,
