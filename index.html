@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tender — Για Ορθόδοξους Χριστιανούς που ψάχνουν γάμο και οικογένεια</title>
+  <meta name="description" content="Tender είναι μια νέα εφαρμογή γνωριμιών για Ορθόδοξους Χριστιανούς με σοβαρή πρόθεση και προσανατολισμό στον γάμο και την οικογένεια. Μπες στη λίστα αναμονής.">
+  <meta name="theme-color" content="#1F3A5F">
+  <meta property="og:title" content="Tender — Γνωριμίες για Ορθόδοξους Χριστιανούς">
+  <meta property="og:description" content="Μια νέα εφαρμογή γνωριμιών για ανθρώπους με κοινή πίστη, σοβαρή πρόθεση και προσανατολισμό στον γάμο και την οικογένεια.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== HERO SECTION ===== -->
+  <header class="hero" id="hero">
+    <div class="hero__container">
+      <div class="hero__badge">Πρώιμη πρόσβαση</div>
+      <h1 class="hero__title">
+        Για Ορθόδοξους Χριστιανούς που ψάχνουν γάμο και οικογένεια
+      </h1>
+      <p class="hero__subtitle">
+        Το <strong>Tender</strong> είναι μια νέα εφαρμογή γνωριμιών για ανθρώπους με κοινή πίστη, σοβαρή πρόθεση και προσανατολισμό στον γάμο και την οικογένεια.
+      </p>
+      <button class="btn btn--primary hero__cta" id="heroCta" type="button">
+        Μπες στη λίστα αναμονής
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== TRUST STRIP ===== -->
+  <section class="trust-strip" aria-label="Χαρακτηριστικά">
+    <div class="trust-strip__container">
+      <div class="trust-strip__item">
+        <div class="trust-strip__icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+        </div>
+        <span>Για Ορθόδοξους Χριστιανούς</span>
+      </div>
+      <div class="trust-strip__item">
+        <div class="trust-strip__icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <span>Με προσανατολισμό στον γάμο και την οικογένεια</span>
+      </div>
+      <div class="trust-strip__item">
+        <div class="trust-strip__icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <span>Πρώιμη πρόσβαση με προσκλήσεις</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUESTIONNAIRE SECTION ===== -->
+  <section class="questionnaire-section" id="questionnaire">
+    <div class="questionnaire-section__container">
+      <h2 class="questionnaire-section__title">Πες μας λίγα για εσένα</h2>
+      <p class="questionnaire-section__subtitle">Απάντησε σε 4 γρήγορες ερωτήσεις για να μπεις στη λίστα αναμονής.</p>
+
+      <div class="questionnaire-card" id="questionnaireCard">
+        <!-- Progress bar -->
+        <div class="progress" id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="4">
+          <div class="progress__bar" id="progressBar"></div>
+          <span class="progress__label" id="progressLabel"></span>
+        </div>
+
+        <!-- Question slides -->
+        <div class="slides" id="slides">
+
+          <!-- Question 1: Age range -->
+          <div class="slide slide--active" data-question="age_range" id="slide-0">
+            <h3 class="slide__question">Ηλικιακό εύρος</h3>
+            <div class="options" role="radiogroup" aria-label="Ηλικιακό εύρος">
+              <button class="option" type="button" data-value="18-24" role="radio" aria-checked="false">18–24</button>
+              <button class="option" type="button" data-value="25-34" role="radio" aria-checked="false">25–34</button>
+              <button class="option" type="button" data-value="35-44" role="radio" aria-checked="false">35–44</button>
+              <button class="option" type="button" data-value="45+" role="radio" aria-checked="false">45+</button>
+            </div>
+          </div>
+
+          <!-- Question 2: Single status -->
+          <div class="slide" data-question="single_status" id="slide-1">
+            <h3 class="slide__question">Είσαι ελεύθερος/η;</h3>
+            <div class="options" role="radiogroup" aria-label="Είσαι ελεύθερος/η;">
+              <button class="option" type="button" data-value="yes" role="radio" aria-checked="false">Ναι</button>
+              <button class="option" type="button" data-value="no" role="radio" aria-checked="false">Όχι</button>
+            </div>
+          </div>
+
+          <!-- Question 3: Gender -->
+          <div class="slide" data-question="gender" id="slide-2">
+            <h3 class="slide__question">Φύλο</h3>
+            <div class="options" role="radiogroup" aria-label="Φύλο">
+              <button class="option" type="button" data-value="male" role="radio" aria-checked="false">Άνδρας</button>
+              <button class="option" type="button" data-value="female" role="radio" aria-checked="false">Γυναίκα</button>
+            </div>
+          </div>
+
+          <!-- Question 4: Church attendance -->
+          <div class="slide" data-question="church_attendance" id="slide-3">
+            <h3 class="slide__question">Κάθε πότε πας εκκλησία την Κυριακή;</h3>
+            <div class="options" role="radiogroup" aria-label="Κάθε πότε πας εκκλησία την Κυριακή;">
+              <button class="option" type="button" data-value="every_sunday" role="radio" aria-checked="false">Κάθε Κυριακή</button>
+              <button class="option" type="button" data-value="1-2_per_month" role="radio" aria-checked="false">1–2 φορές τον μήνα</button>
+              <button class="option" type="button" data-value="holidays" role="radio" aria-checked="false">Τις γιορτές</button>
+              <button class="option" type="button" data-value="easter_only" role="radio" aria-checked="false">Μόνο την Ανάσταση</button>
+            </div>
+          </div>
+
+          <!-- Disqualified state (not single) -->
+          <div class="slide" id="slide-disqualified">
+            <div class="end-state end-state--disqualified">
+              <div class="end-state__icon" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D32F2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+              </div>
+              <h3 class="end-state__title">Ευχαριστούμε για το ενδιαφέρον σου!</h3>
+              <p class="end-state__text">
+                Η λίστα αναμονής αφορά αυτή τη στιγμή άτομα που είναι ελεύθερα. Αν αλλάξει η κατάστασή σου στο μέλλον, θα χαρούμε να σε υποδεχτούμε.
+              </p>
+            </div>
+          </div>
+
+          <!-- Email capture state -->
+          <div class="slide" id="slide-email">
+            <div class="email-capture">
+              <div class="email-capture__icon" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1F3A5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <h3 class="email-capture__title">Είσαι ένα βήμα πριν!</h3>
+              <p class="email-capture__text">
+                Άφησε το email σου για να μπεις στη λίστα αναμονής και να είσαι από τους πρώτους που θα λάβουν πρόσκληση.
+              </p>
+              <form class="email-form" id="emailForm" novalidate>
+                <div class="email-form__field">
+                  <label for="emailInput" class="sr-only">Email</label>
+                  <input
+                    type="email"
+                    id="emailInput"
+                    class="email-form__input"
+                    placeholder="To email σου"
+                    required
+                    autocomplete="email"
+                    inputmode="email"
+                  >
+                  <div class="email-form__error" id="emailError" role="alert"></div>
+                </div>
+                <button type="submit" class="btn btn--primary email-form__submit" id="emailSubmit">
+                  Μπες στη λίστα αναμονής
+                </button>
+              </form>
+              <p class="email-capture__privacy">
+                Το email σου θα χρησιμοποιηθεί μόνο για τη λίστα αναμονής του Tender. Δεν θα κοινοποιηθεί σε τρίτους και δεν θα σου στέλνουμε spam.
+              </p>
+            </div>
+          </div>
+
+          <!-- Success state -->
+          <div class="slide" id="slide-success">
+            <div class="end-state end-state--success">
+              <div class="end-state__icon" aria-hidden="true">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3 class="end-state__title end-state__title--success">Είσαι μέσα!</h3>
+              <p class="end-state__text">
+                Είσαι ανάμεσα στους πρώτους ανθρώπους που θα ενημερωθούν όταν ανοίξουν οι πρώτες προσκλήσεις. Ευχαριστούμε για την εμπιστοσύνη σου.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ SECTION ===== -->
+  <section class="faq" id="faq" aria-label="Συχνές ερωτήσεις">
+    <div class="faq__container">
+      <h2 class="faq__title">Συχνές ερωτήσεις</h2>
+
+      <details class="faq__item">
+        <summary class="faq__question">Τι είναι το Tender;</summary>
+        <p class="faq__answer">
+          Το Tender είναι μια εφαρμογή γνωριμιών σχεδιασμένη αποκλειστικά για Ορθόδοξους Χριστιανούς που αναζητούν σοβαρή σχέση με προοπτική γάμου και οικογένειας.
+        </p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__question">Πότε θα είναι διαθέσιμη η εφαρμογή;</summary>
+        <p class="faq__answer">
+          Βρισκόμαστε σε πρώιμο στάδιο ανάπτυξης. Όσοι μπουν στη λίστα αναμονής θα είναι οι πρώτοι που θα λάβουν πρόσκληση μόλις ξεκινήσουμε.
+        </p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__question">Είναι δωρεάν;</summary>
+        <p class="faq__answer">
+          Η πρώιμη πρόσβαση θα είναι δωρεάν. Θα ανακοινωθούν λεπτομέρειες τιμολόγησης αργότερα.
+        </p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__question">Πώς προστατεύονται τα δεδομένα μου;</summary>
+        <p class="faq__answer">
+          Τα δεδομένα σου αποθηκεύονται με ασφάλεια και δεν κοινοποιούνται σε τρίτους. Χρησιμοποιούνται αποκλειστικά για τη λίστα αναμονής του Tender.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__brand">Tender</p>
+      <p class="footer__copy">&copy; 2026 Tender. Με αγάπη και πίστη.</p>
+    </div>
+  </footer>
+
+  <!-- ===== STICKY MOBILE CTA ===== -->
+  <div class="sticky-cta" id="stickyCta">
+    <button class="btn btn--primary sticky-cta__btn" id="stickyCtaBtn" type="button">
+      Μπες στη λίστα αναμονής
+    </button>
+  </div>
+
+  <!-- Firebase SDK (compat for simplicity with GitHub Pages) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+  <!-- Firebase config (edit this file with your credentials) -->
+  <script src="firebase-config.js"></script>
+
+  <!-- App logic -->
+  <script src="script.js"></script>
+</body>
+</html>
